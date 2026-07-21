@@ -1,0 +1,206 @@
+.footer{
+
+    position:relative;
+
+    overflow:hidden;
+
+background-color: white;
+    padding:6rem 1.5rem 2rem;
+
+}
+
+/* White Glow */
+
+.footer-glow{
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    filter:blur(180px);
+
+    left:50%;
+
+    top:-350px;
+
+    transform:translateX(-50%);
+}
+
+.footer-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:750px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+.footer h2{
+color: #08131f;
+    font-size:2.5rem;
+
+    margin-bottom:1rem;
+
+    font-weight:700;
+}
+
+.footer p{
+
+    color:#B7C3D0;
+
+    line-height:1.8;
+}
+
+.footer-btn{
+
+    display:inline-block;
+
+    margin:2.5rem 0;
+
+    padding:14px 36px;
+
+    background:rgb(4, 7, 46);
+
+    color:#e8f0f8;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.footer-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 35px rgba(255,255,255,.35);
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:2rem;
+
+    margin:2rem 0;
+
+    flex-wrap:wrap;
+}
+
+.footer-links a{
+
+    color:#000305;
+
+    transition:.3s;
+}
+
+.footer-links a:hover{
+
+  
+    color: #08131f;
+}
+
+.footer-contact{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:2rem;
+
+    flex-wrap:wrap;
+
+    margin-top:2rem;
+
+    color:#021b3377;
+
+    font-size:.95rem;
+}
+
+.copyright{
+
+    margin-top:3rem;
+
+    color:#000a13;
+
+    font-size:.9rem;
+}
+
+/* Tablet */
+
+@media(max-width:768px){
+
+.footer{
+
+padding:5rem 1.5rem 2rem;
+
+}
+
+.footer h2{
+
+font-size:2rem;
+
+}
+
+.footer-links{
+
+gap:1.5rem;
+
+}
+
+.footer-contact{
+
+flex-direction:column;
+
+gap:.8rem;
+
+}
+
+}
+
+/* Small Phones */
+
+@media(max-width:480px){
+
+.footer h2{
+
+font-size:1.6rem;
+
+}
+
+.footer p{
+
+font-size:.95rem;
+
+}
+
+.footer-btn{
+
+width:100%;
+
+max-width:260px;
+
+}
+
+.footer-links{
+
+flex-direction:column;
+
+gap:1rem;
+
+}
+
+}

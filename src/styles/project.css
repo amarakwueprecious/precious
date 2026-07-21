@@ -1,0 +1,438 @@
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+.projects {
+    width: 100%;
+    padding:
+        clamp(5rem, 10vw, 8rem)
+        clamp(1rem, 7vw, 8%);
+
+    background: var(--surface);
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.projects-heading {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 2rem;
+}
+
+.projects-number {
+    color: var(--accent);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    letter-spacing: 0.2rem;
+}
+
+.projects-title {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.projects-dot {
+    width: 10px;
+    height: 10px;
+
+    background: var(--accent);
+
+    border-radius: 50%;
+
+    animation: projectBounce 2s ease-in-out infinite;
+}
+
+@keyframes projectBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.projects-title h2 {
+    color: var(--primary);
+
+    font-size: clamp(2rem, 5vw, 4rem);
+
+    letter-spacing: -0.05em;
+}
+
+.projects-heading p {
+    color: var(--secondary);
+
+    margin-top: 0.8rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   PROJECT CONTAINER
+========================= */
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: clamp(6rem, 12vw, 10rem);
+
+    margin-top: clamp(4rem, 8vw, 7rem);
+}
+
+
+/* =========================
+   PROJECT
+========================= */
+
+.project {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: clamp(2rem, 6vw, 6rem);
+}
+
+
+/* Reverse project 2 */
+
+.project:nth-child(even) .project-image {
+    order: 2;
+}
+
+.project:nth-child(even) .project-content {
+    order: 1;
+}
+
+
+/* =========================
+   PROJECT IMAGE
+========================= */
+
+.project-image {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 1.5rem;
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.project-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(5, 13, 24, 0.35),
+            transparent 50%
+        );
+
+    pointer-events: none;
+}
+
+.project-image img {
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.8s ease,
+        filter 0.8s ease;
+}
+
+.project:hover .project-image img {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   PROJECT CONTENT
+========================= */
+
+.project-number {
+    color: var(--accent);
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.2rem;
+}
+
+.project-content h3 {
+    color: var(--primary);
+
+    font-size: clamp(2.5rem, 6vw, 5rem);
+
+    line-height: 0.95;
+
+    letter-spacing: -0.06em;
+
+    margin: 1.2rem 0;
+}
+
+.project-content h4 {
+    color: var(--accent-soft);
+
+    font-size: clamp(1rem, 2vw, 1.3rem);
+
+    font-weight: 500;
+
+    margin-bottom: 1.5rem;
+}
+
+.project-content p {
+    color: var(--secondary);
+
+    line-height: 1.9;
+
+    max-width: 32rem;
+}
+
+
+/* =========================
+   TECH STACK
+========================= */
+
+.project-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.7rem;
+
+    margin: 2rem 0;
+}
+
+.project-tech span {
+    padding: 0.5rem 1rem;
+
+    border: 1px solid var(--border);
+
+    border-radius: 2rem;
+
+    color: var(--secondary);
+
+    font-size: 0.8rem;
+
+    transition: 0.3s ease;
+}
+
+.project-tech span:hover {
+    color: var(--accent);
+
+    border-color: var(--accent);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   PROJECT LINK
+========================= */
+
+.project-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.7rem;
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    padding-bottom: 0.5rem;
+
+    border-bottom: 1px solid var(--accent);
+
+    transition: 0.3s ease;
+}
+
+.project-link span {
+    color: var(--accent);
+
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--accent);
+}
+
+.project-link:hover span {
+    transform: translate(5px, -5px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .project {
+        grid-template-columns: 1fr;
+
+        gap: 2.5rem;
+    }
+
+    .project:nth-child(even) .project-image,
+    .project:nth-child(even) .project-content {
+        order: initial;
+    }
+
+}
+
+
+/* =========================
+   PHONES
+========================= */
+
+@media (max-width: 576px) {
+
+    .projects {
+        padding:
+            5rem
+            clamp(1rem, 5vw, 1.5rem);
+    }
+
+    .projects-heading {
+        gap: 1rem;
+    }
+
+    .projects-title {
+        gap: 0.7rem;
+    }
+
+    .projects-title h2 {
+        font-size: 2.3rem;
+    }
+
+    .projects-heading p {
+        font-size: 0.9rem;
+    }
+
+    .projects-container {
+        gap: 6rem;
+
+        margin-top: 4rem;
+    }
+
+    .project {
+        gap: 2rem;
+    }
+
+    .project-image {
+        border-radius: 1rem;
+    }
+
+    .project-content h3 {
+        font-size: clamp(2.3rem, 13vw, 3.3rem);
+
+        overflow-wrap: anywhere;
+    }
+
+    .project-content h4 {
+        font-size: 1rem;
+    }
+
+    .project-content p {
+        font-size: 0.92rem;
+
+        line-height: 1.8;
+    }
+
+}
+
+
+/* =========================
+   iPHONE 8 / SMALL PHONES
+========================= */
+
+@media (max-width: 390px) {
+
+    .projects {
+        padding-inline: 1.2rem;
+    }
+
+    .projects-heading {
+        gap: 0.7rem;
+    }
+
+    .projects-number {
+        font-size: 0.65rem;
+    }
+
+    .projects-title h2 {
+        font-size: 2rem;
+    }
+
+    .project-content h3 {
+        font-size: 2.4rem;
+    }
+
+    .project-tech span {
+        padding: 0.4rem 0.7rem;
+
+        font-size: 0.7rem;
+    }
+
+}
+
+
+/* =========================
+   320PX PHONES
+========================= */
+
+@media (max-width: 320px) {
+
+    .projects {
+        padding-inline: 1rem;
+    }
+
+    .projects-title h2 {
+        font-size: 1.7rem;
+    }
+
+    .project-content h3 {
+        font-size: 2rem;
+    }
+
+    .project-content p {
+        font-size: 0.85rem;
+    }
+
+    .project-tech {
+        gap: 0.5rem;
+    }
+
+}

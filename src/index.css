@@ -1,0 +1,56 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    --background:#050D18;
+    --surface:#091525;
+    --card:#0E2035;
+
+    --primary:#EAF4FF;
+    --secondary:#8FA7C2;
+
+    --accent:#3B9CFF;
+    --accent-soft:#79BEFF;
+    --hover:#167FE8;
+
+    --border:rgba(59,156,255,.15);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--background);
+    color:var(--primary);
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    cursor:pointer;
+    border:none;
+    outline:none;
+    font-family:inherit;
+}
+
+main{
+    width:min(1200px,90%);
+    margin:auto;
+}
+

@@ -1,0 +1,284 @@
+.experience {
+    width: 100%;
+    padding: clamp(5rem, 10vw, 8rem) clamp(1rem, 6vw, 5rem);
+    background: var(--background);
+    overflow: hidden;
+}
+
+/* HEADING */
+
+.experience-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(.8rem, 3vw, 2rem);
+}
+
+.experience-number {
+    flex-shrink: 0;
+    color: var(--accent);
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .15rem;
+}
+
+.experience-title {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.experience-dot {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: experienceBounce 2s ease-in-out infinite;
+}
+
+@keyframes experienceBounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.experience-title h2 {
+    color: var(--primary);
+    font-size: clamp(2rem, 6vw, 4rem);
+    line-height: 1;
+    letter-spacing: -.05em;
+    overflow-wrap: anywhere;
+}
+
+.experience-heading p {
+    color: var(--secondary);
+    margin-top: 1rem;
+    line-height: 1.7;
+    max-width: 35rem;
+}
+
+/* TIMELINE */
+
+.timeline {
+    position: relative;
+    width: 100%;
+    margin-top: clamp(4rem, 8vw, 7rem);
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    bottom: 0;
+    width: 1px;
+    background: var(--border);
+}
+
+.timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40px minmax(120px, 180px) minmax(0, 1fr);
+    gap: clamp(1rem, 4vw, 2rem);
+    width: 100%;
+    padding-bottom: clamp(4rem, 7vw, 6rem);
+}
+
+/* MARKER */
+
+.timeline-marker {
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-marker span {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: var(--background);
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    transition: .4s ease;
+}
+
+.timeline-item:hover .timeline-marker span {
+    background: var(--accent);
+    transform: scale(1.2);
+}
+
+/* YEAR */
+
+.timeline-year {
+    color: var(--accent);
+    font-size: .75rem;
+    line-height: 1.5;
+    letter-spacing: .1rem;
+}
+
+/* CONTENT */
+
+.timeline-content {
+    min-width: 0;
+}
+
+.timeline-content h3 {
+    color: var(--primary);
+    font-size: clamp(1.7rem, 4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -.04em;
+    margin-bottom: .7rem;
+    overflow-wrap: break-word;
+}
+
+.timeline-content h4 {
+    color: var(--accent-soft);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.timeline-content p {
+    color: var(--secondary);
+    max-width: 38rem;
+    line-height: 1.9;
+}
+
+/* TABLETS + BIG PHONES */
+
+@media (max-width: 900px) {
+    .timeline-item {
+        grid-template-columns: 30px minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .timeline-year {
+        grid-column: 2;
+    }
+
+    .timeline-content {
+        grid-column: 2;
+    }
+}
+
+/* PHONES */
+
+@media (max-width: 600px) {
+    .experience {
+        padding: 5rem 1.25rem;
+    }
+
+    .experience-heading {
+        gap: .7rem;
+    }
+
+    .experience-title {
+        gap: .6rem;
+    }
+
+    .experience-title h2 {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .experience-heading p {
+        font-size: .9rem;
+    }
+
+    .timeline {
+        margin-top: 4rem;
+    }
+
+    .timeline::before {
+        left: 6px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 25px minmax(0, 1fr);
+        gap: .8rem;
+        padding-bottom: 4rem;
+    }
+
+    .timeline-marker span {
+        width: 13px;
+        height: 13px;
+    }
+
+    .timeline-year {
+        font-size: .65rem;
+        letter-spacing: .07rem;
+    }
+
+    .timeline-content h3 {
+        font-size: clamp(1.6rem, 8vw, 2.3rem);
+    }
+
+    .timeline-content h4 {
+        font-size: .9rem;
+    }
+
+    .timeline-content p {
+        font-size: .9rem;
+        line-height: 1.8;
+    }
+}
+
+/* IPHONE 8 / SMALL PHONES */
+
+@media (max-width: 390px) {
+    .experience {
+        padding-inline: 1rem;
+    }
+
+    .experience-number {
+        font-size: .6rem;
+    }
+
+    .experience-title h2 {
+        font-size: 2rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.6rem;
+    }
+}
+
+/* VERY SMALL 320PX PHONES */
+
+@media (max-width: 320px) {
+    .experience {
+        padding-inline: .8rem;
+    }
+
+    .experience-heading {
+        gap: .5rem;
+    }
+
+    .experience-title h2 {
+        font-size: 1.7rem;
+    }
+
+    .timeline-item {
+        grid-template-columns: 20px minmax(0, 1fr);
+        gap: .6rem;
+    }
+
+    .timeline::before {
+        left: 5px;
+    }
+
+    .timeline-marker span {
+        width: 11px;
+        height: 11px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .timeline-content p {
+        font-size: .82rem;
+    }
+}
