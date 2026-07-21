@@ -4,7 +4,7 @@ const skills = [
   { icon: "⚛", name: "React" },
   { icon: "🟨", name: "JavaScript" },
   { icon: "🐘", name: "PHP" },
-  { icon: "🎨", name: "UI / UX" },
+  { icon: "🎨", name: "MySQL" },
   { icon: "🌐", name: "HTML5" },
   { icon: "🎯", name: "CSS3" },
    { icon: "🐘", name: "PostgreSQL" },
