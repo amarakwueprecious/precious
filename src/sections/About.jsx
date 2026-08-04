@@ -28,8 +28,8 @@ function About() {
           </h3>
 
           <p>
-            I'm <strong>Precious</strong>, a Full Stack Developer and UI/UX
-            Designer passionate about creating modern, responsive and visually
+            I'm <strong>Precious</strong>, a Full Stack Developer
+            passionate about creating modern, responsive and visually
             appealing web applications that deliver seamless user experiences.
           </p>
 

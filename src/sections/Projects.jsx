@@ -9,7 +9,7 @@ const projects = [
     category: "Luxury Fashion E-commerce",
     description:
       "A refined luxury fashion experience designed around elegant visuals, modern interfaces and seamless shopping.",
-    tech: ["React",  "PostgreSQL"],
+    tech: ["HTML5/CSS3", "JavaScript(ES6)", "MySQL"],
     image: aurelia,
   },
 
@@ -19,7 +19,7 @@ const projects = [
     category: "Rustic Restaurant Website",
     description:
       "A warm rustic restaurant experience combining rich food visuals, thoughtful layouts and simple navigation.",
-    tech: ["HTML", "CSS", "JavaScript"],
+    tech: ["HTML5/CSS3", "JavaScript(ES6)"],
     image: tastee,
   },
 ];

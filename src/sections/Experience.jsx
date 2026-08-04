@@ -9,19 +9,21 @@ const experiences = [
       "Building responsive web applications, e-commerce experiences and database-driven platforms using modern frontend and backend technologies.",
   },
   {
-    year: "2024 — 2025",
-    role: "Web Developer",
-    company: "Trinity Tech",
+    year: "2 year Experience",
+    role: "Junior Full-Stack Developer",
+    company: "Trinity Computer School",
     description:
       "Worked on modern web interfaces, responsive layouts and functional digital experiences.",
   },
   {
-    year: "2024 — PRESENT",
-    role: "UI / UX Designer",
-    company: "Independent Designer",
+    year: "1 year",
+    role: "Full-Stack Development Training",
+    company: "Trinity Computer School",
     description:
-      "Designing clean interfaces and thoughtful user experiences focused on usability and visual clarity.",
+      "",
   },
+  
+  
 ];
 
 function Experience() {
