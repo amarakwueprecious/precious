@@ -1,5 +1,5 @@
 import "../styles/hero.css";
-import profile from "../assets/images/profile.png";
+import profile from "../assets/images/portfolio image.png";
 import resume from "../assets/resume/Nzubechukwu_Precious_Premium_Resume.docx";
 
 function Hero() {
