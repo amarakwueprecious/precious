@@ -45,19 +45,19 @@
 // }
 import { useState } from "react";
 import "../styles/navbar.css";
-import resume from "../assets/resume/Nzubechukwu_Precious_Premium_Resume.docx";
+
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-   const downloadCV = () => {
-      const link = document.createElement("a");
-      link.href = resume;
-      link.download = "Nzubechukwu_Precious_Premium_Resume.docx";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    };
+  const downloadCV = () => {
+  const link = document.createElement("a");
+  link.href = "/precious_resume.pdf";
+  link.download = "Precious_Resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
   
     const scrollToProjects = () => {
       const section = document.getElementById("projects");
